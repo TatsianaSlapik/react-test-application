@@ -1,15 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import './Button.scss';
+import "./Button.scss";
 
-export default function Button({action, mod = '', children}) {
-  return (
-    <button
-      className={`button ${mod && `button_${mod}`}`}
-      title={children}
-      onClick={action}
-    >
-      {children}
-    </button>
-  )
+export default function Button() {
+  return <button className="button">В корзину </button>;
 }
