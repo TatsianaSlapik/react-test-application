@@ -3,13 +3,19 @@
 .button {
   border: 6px solid red;
   border-radius: 8px;
-  padding: 5px 20px;
+  padding: 5px 10px;
   color: #ffffff;
   font-size: 20px;
   background-color: red;
-
+  display: flex;
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
+  }
+  img {
+    margin: 6px;
+  }
+  p {
+    margin: 12px;
   }
 }
