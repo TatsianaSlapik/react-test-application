@@ -1,0 +1,15 @@
+.filters {
+  box-shadow: inset -3px 0 1px rgba(0, 0, 0, 0.4);
+  color: #74828d;
+  background: #253447;
+  max-height: 100%;
+  overflow: auto;
+  position: fixed;
+  width: 20%;
+}
+
+.filters__header {
+  background: #1c2939;
+  box-shadow: inset -3px 0 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+}

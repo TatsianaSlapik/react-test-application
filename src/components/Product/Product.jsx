@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button/Button";
+import ButtonCart from "../ButtonCart/ButtonCart";
 import "./Product.scss";
 
 const AboutTheProduct = {
@@ -23,7 +23,7 @@ export default function Product({ name, description, image, price }) {
           {AboutTheProduct.DESCRIPTION}: {description}
         </p>
 
-        <Button />
+        <ButtonCart />
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Cart from "../../assets/img/cart.png";
 import Popup from "../Popup/Popup";
-import "./Button.scss";
+import "./ButtonCart.scss";
 
-export default function Button() {
+export default function ButtonCart() {
   const [showPopup, setShowPopup] = useState(false);
   const show = () => setShowPopup(true);
   const hide = () => setShowPopup(false);

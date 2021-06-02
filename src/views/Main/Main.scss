@@ -1,5 +1,7 @@
 .main {
   width: 1200px;
+  display: flex;
+  flex-direction: row;
   .product_container {
     display: flex;
     flex-wrap: wrap;
