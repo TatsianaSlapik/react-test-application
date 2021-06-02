@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 
+import "./Filters.scss";
 export default function Filters() {
   return (
     <div className="filters">
-      <header className="filters__header">
-        <h2 className="filters__header__title">Filters</h2>
+      <header className="filters_header">
+        <h2 className="filters_header_title">Filters</h2>
       </header>
-      <div className="filters__inner">
-        <div className="filters__filter">
-          <h3 className="filters__filter__title">Category</h3>
+      <div className="filters_inner">
+        <div className="filters_filter">
+          <h3 className="filters_filter_title">Category</h3>
           <ul>
-            <li>
+            <li className="filters_inner_li">
               <input type="checkbox" />
               <label>1</label>
             </li>
@@ -29,7 +30,7 @@ export default function Filters() {
           </ul>
         </div>
         <div className="filters_price">
-          <h3 className="filters__filter__title">Price</h3>
+          <h3 className="filters_filter_title">Price</h3>
           <p>
             <input maxlength="25" size="20" />
             -

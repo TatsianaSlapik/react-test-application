@@ -1,31 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 
-import './index.scss';
-import Main from './views/Main/Main';
-import { load, parseSave, save, setDefault } from './utils/save';
+import "./index.scss";
+import Main from "./views/Main/Main";
+import Header from "./components/Header/Header";
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 
 function App() {
-  useEffect(() => {
-    if (!load()) setDefault();
-    parseSave();
-
-	// check fullscreen
-    const query = matchMedia('all and (display-mode: fullscreen');
-
-    query.onchange = (e) => {
-      const checkbox = document.querySelector('.checkbox.fullscreen');
-      checkbox && (checkbox.checked = query.matches);
-    };
-  }, [])
-
-  return <>
-    <Main/>
-  </>;
+  return (
+    <>
+      <Header></Header>
+      <Main />
+    </>
+  );
 }
 
-ReactDOM.render(
-  <App />,
-  rootElement);
+ReactDOM.render(<App />, rootElement);
