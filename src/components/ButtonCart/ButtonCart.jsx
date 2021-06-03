@@ -8,10 +8,10 @@ export default function ButtonCart() {
   const show = () => setShowPopup(true);
   const hide = () => setShowPopup(false);
   return (
-    <div className="app">
+    <div className="button_container">
       <button className="button" onClick={show}>
         <img src={Cart} alt="basket" />
-        <p>Add to cart</p>
+        <p>В корзину</p>
       </button>
       {showPopup === true ? (
         <Popup onHidePopup={hide} text="Product added to cart"></Popup>

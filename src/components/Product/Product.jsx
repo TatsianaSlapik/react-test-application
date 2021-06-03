@@ -13,18 +13,11 @@ export default function Product({ name, description, image, price }) {
     <div className="product">
       <img className="product_img" src={image} alt="photo" />
       <div>
-        <h2 className="product_name">
-          {AboutTheProduct.NAME} : {name}
-        </h2>
-        <h3 className="product_price">
-          {AboutTheProduct.PRICE}:{price}
-        </h3>
-        <p className="product_ description">
-          {AboutTheProduct.DESCRIPTION}: {description}
-        </p>
-
-        <ButtonCart />
+        <h2 className="product_name">{name}</h2>
+        <h3 className="product_price">{price} &#8381;</h3>
+        {/* <p className="product_ description">{description}</p> */}
       </div>
+      <ButtonCart />
     </div>
   );
 }

@@ -6,6 +6,6 @@ export const getProducts = (quantity) => {
   )
     .then((response) => response.json())
     .catch((e) => {
-      console.log("cant get product with error", e);
+      console.log("can't get product with error", e);
     });
 };

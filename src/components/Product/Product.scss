@@ -1,7 +1,22 @@
 .product {
-  width: 360px;
+  width: 270px;
   margin: 10px;
-}
-.product_img {
-  width: 240px;
+  height: 445px;
+  position: relative;
+  .product_img {
+    width: 180px;
+    height: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+  .product_name {
+    font-weight: 500;
+  }
+  .product_price {
+    font-size: 30px;
+  }
+  .button_container {
+    position: absolute;
+    bottom: 0;
+  }
 }

@@ -1,6 +1,7 @@
 .filters {
   overflow: auto;
-  width: 400px;
+  width: 405px;
+  flex-shrink: 0;
 }
 
 .filters_header {

@@ -6,11 +6,9 @@ import "./Main.scss";
 
 export default function Main() {
   return (
-    <>
-      <div className="main">
-        <Filters />
-        <ProductListing></ProductListing>
-      </div>
-    </>
+    <div className="main">
+      <Filters />
+      <ProductListing></ProductListing>
+    </div>
   );
 }

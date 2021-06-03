@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+
 import Product from "../Product/Product";
 import Switcher from "../Switcher/Switcher";
+import "./ProductListing.scss";
 
 export default function ProductListing() {
   const [productList, setProductsList] = useState([]);
@@ -26,7 +28,7 @@ export default function ProductListing() {
             <Product
               name={el.name}
               description={el.description}
-              image={el.image}
+              image={el.image + `?id=${i}`}
               price={el.price}
               key={i}
             ></Product>
