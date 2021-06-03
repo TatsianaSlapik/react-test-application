@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Product from "../Product/Product";
+import Switcher from "../Switcher/Switcher";
 
 export default function ProductListing() {
   const [productList, setProductsList] = useState([]);
@@ -15,18 +16,23 @@ export default function ProductListing() {
   }, []);
 
   return (
-    <div className="product_container">
-      {productList.map((el, i) => {
-        return (
-          <Product
-            name={el.name}
-            description={el.description}
-            image={el.image}
-            price={el.price}
-            key={i}
-          ></Product>
-        );
-      })}
+    <div>
+      <div className="product_switcher">
+        <Switcher></Switcher>{" "}
+      </div>
+      <div className="product_container">
+        {productList.map((el, i) => {
+          return (
+            <Product
+              name={el.name}
+              description={el.description}
+              image={el.image}
+              price={el.price}
+              key={i}
+            ></Product>
+          );
+        })}
+      </div>
     </div>
   );
 }

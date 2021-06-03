@@ -13,7 +13,9 @@ export default function ButtonCart() {
         <img src={Cart} alt="basket" />
         <p>Add to cart</p>
       </button>
-      {showPopup === true ? <Popup onHidePopup={hide}></Popup> : null}
+      {showPopup === true ? (
+        <Popup onHidePopup={hide} text="Product added to cart"></Popup>
+      ) : null}
     </div>
   );
 }
