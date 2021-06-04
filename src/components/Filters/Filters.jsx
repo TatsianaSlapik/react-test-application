@@ -2,6 +2,7 @@ import React from "react";
 import Accordion from "../Accordion/Accordion";
 
 import "./Filters.scss";
+
 const filters = [
   {
     name: "Category",

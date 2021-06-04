@@ -12,7 +12,9 @@ function Header({ productsList }) {
     </header>
   );
 }
+
 const mapStateToProps = (state) => ({
   productsList: state.productsList,
 });
+
 export default connect(mapStateToProps)(Header);

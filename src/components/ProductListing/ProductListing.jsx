@@ -48,8 +48,10 @@ function ProductListing({ listState, productsList }) {
     </div>
   );
 }
+
 const mapStateToProps = (state) => ({
   listState: state.listViewState,
   productsList: state.productsList,
 });
+
 export default connect(mapStateToProps)(ProductListing);

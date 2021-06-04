@@ -10,7 +10,6 @@ export default function Accordion({ name, content }) {
     <>
       <div className="accordion-item__line" onClick={show}>
         <h3 className="filters_filter_title">{name}</h3>
-
         <span
           className={
             showContent === false
@@ -19,7 +18,6 @@ export default function Accordion({ name, content }) {
           }
         ></span>
       </div>
-
       <div
         className={
           showContent === false ? "accordion_content_hide" : "accordion_content"

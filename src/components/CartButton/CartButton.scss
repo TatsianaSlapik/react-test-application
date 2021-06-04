@@ -7,14 +7,17 @@
   background-color: #d90929;
   display: flex;
   margin: 0 auto;
+
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
   }
+
   img {
     width: 32px;
     margin-right: 10px;
   }
+
   p {
     font-weight: 600;
   }

@@ -4,11 +4,13 @@
   padding-top: 180px;
   justify-content: flex-end;
 }
+
 .list {
   flex-direction: column;
   padding-top: 90px;
   margin-left: 60px;
   margin-right: 60px;
+
   @media screen and (max-width: 320px) {
     flex-direction: column;
     padding-top: 90px;
