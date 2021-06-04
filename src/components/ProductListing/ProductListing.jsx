@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
+import { connect, useDispatch } from "react-redux";
 
 import Product from "../Product/Product";
 import Switcher from "../Switcher/Switcher";
-import { connect, useDispatch } from "react-redux";
+import { getProducts } from "../../utils/api";
+
 import actions from "../../utils/actions";
 
 import "./ProductListing.scss";
@@ -16,13 +18,9 @@ function ProductListing({ listState, productsList }) {
 
   useEffect(() => {
     if (productsList.length === 0) {
-      fetch(
-        `https://fakerapi.it/api/v1/products?_quantity=10&_taxes=10&_categories_type=string`
-      )
-        .then((res) => res.json())
-        .then((result) => {
-          setProductsList(result.data);
-        });
+      getProducts(10).then((result) => {
+        setProductsList(result.data);
+      });
     }
   }, []);
 
