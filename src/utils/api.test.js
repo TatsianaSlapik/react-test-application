@@ -13,16 +13,17 @@ describe("API tests", () => {
       return Promise.resolve({ ...params });
     });
   };
+
   beforeEach(() => {
     setFetch({ json: toJson(testValue) });
   });
+
   afterEach(() => {
     fetch.mockRestore();
   });
 
   it("Should return promise with products", async () => {
     const resp = await getProducts();
-
     expect(resp).toEqual(testValue);
   });
 });

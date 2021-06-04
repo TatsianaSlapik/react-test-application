@@ -5,14 +5,18 @@ import Popup from "./Popup.jsx";
 import { Provider } from "react-redux";
 
 import configureStore from "redux-mock-store";
+
 const mockStore = configureStore([]);
+
 describe("Popup", () => {
   let store;
   let component;
+
   beforeEach(() => {
     store = mockStore({
       showAddToCartPopup: true,
     });
+
     component = renderer.create(
       <Provider store={store}>
         <Popup />

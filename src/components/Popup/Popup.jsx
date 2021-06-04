@@ -32,4 +32,5 @@ function Popup({ showPopup, text }) {
 const mapStateToProps = (state) => ({
   showPopup: state.showAddToCartPopup,
 });
+
 export default connect(mapStateToProps)(Popup);

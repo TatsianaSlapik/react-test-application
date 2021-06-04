@@ -4,16 +4,19 @@ import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 
 import ProductListing from "./ProductListing.jsx";
+
 const mockStore = configureStore([]);
 
 describe("ProductListing", () => {
   let store;
   let component;
+
   beforeEach(() => {
     store = mockStore({
       productsList: [],
       listViewState: false,
     });
+
     component = renderer.create(
       <Provider store={store}>
         <ProductListing />

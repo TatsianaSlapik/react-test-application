@@ -29,4 +29,5 @@ function Switcher({ listState }) {
 }
 
 const mapStateToProps = (state) => ({ listState: state.listViewState });
+
 export default connect(mapStateToProps)(Switcher);

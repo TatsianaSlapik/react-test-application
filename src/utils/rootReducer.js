@@ -5,6 +5,7 @@ export const initialState = {
   listViewState: false,
   showAddToCartPopup: false,
 };
+
 export default function rootReducer(state = initialState, action) {
   switch (action.type) {
     case actions.CHANGE_VIEW: {
