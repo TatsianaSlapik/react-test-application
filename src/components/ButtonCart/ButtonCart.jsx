@@ -1,21 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch } from "react-redux";
+
 import Cart from "../../assets/img/cart.png";
-import Popup from "../Popup/Popup";
+import actions from "../../utils/actions";
+
 import "./ButtonCart.scss";
 
 export default function ButtonCart() {
-  const [showPopup, setShowPopup] = useState(false);
-  const show = () => setShowPopup(true);
-  const hide = () => setShowPopup(false);
+  const dispatch = useDispatch();
+
+  const showPopup = () => {
+    dispatch({ type: actions.SHOW_ADD_TO_CART_POPUP, payload: true });
+  };
+
   return (
     <div className="button_container">
-      <button className="button" onClick={show}>
+      <button className="button" onClick={showPopup}>
         <img src={Cart} alt="basket" />
-        <p>В корзину</p>
+        <p>Add to cart</p>
       </button>
-      {showPopup === true ? (
-        <Popup onHidePopup={hide} text="Product added to cart"></Popup>
-      ) : null}
     </div>
   );
 }

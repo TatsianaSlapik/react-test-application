@@ -1,16 +1,35 @@
 import React from "react";
+import { connect, useDispatch } from "react-redux";
+import actions from "../../utils/actions";
 
 import "./Popup.scss";
 
-export default function Popup({ onHidePopup, text }) {
+function Popup({ showPopup, text }) {
+  const dispatch = useDispatch();
+
+  const hidePopup = () => {
+    dispatch({ type: actions.SHOW_ADD_TO_CART_POPUP, payload: false });
+  };
+
   return (
-    <div className="popup">
-      <div className="popup_inner">
-        <h2 className="popup_text">{text}</h2>
-        <button className="popup_btn" onClick={onHidePopup}>
-          ОК
-        </button>
-      </div>
-    </div>
+    <>
+      {showPopup ? (
+        <div className="popup">
+          <div className="popup_inner">
+            <h2 className="popup_text">{text}</h2>
+            <button className="popup_btn" onClick={hidePopup}>
+              ОК
+            </button>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+    </>
   );
 }
+
+const mapStateToProps = (state) => ({
+  showPopup: state.showAddToCartPopup,
+});
+export default connect(mapStateToProps)(Popup);
