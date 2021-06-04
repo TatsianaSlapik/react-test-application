@@ -1,42 +1,44 @@
-import React, { useState } from "react";
+import React from "react";
+import Accordion from "../Accordion/Accordion";
 
 import "./Filters.scss";
+const filters = [
+  {
+    name: "Category",
+    content: (
+      <ul>
+        <li className="filters_inner_li">
+          <input type="checkbox" />
+          <label>1</label>
+        </li>
+        <li className="filters_inner_li">
+          <input type="checkbox" />
+          <label>2</label>
+        </li>
+      </ul>
+    ),
+  },
+  {
+    name: "Price",
+    content: (
+      <div className="filters_price_inner">
+        <input maxlength="25" size="5" />
+        ―
+        <input maxlength="25" size="5" />
+      </div>
+    ),
+  },
+];
+
 export default function Filters() {
   return (
     <div className="filters">
-      <header className="filters_header">
-        <h2 className="filters_header_title">Filters</h2>
-      </header>
       <div className="filters_inner">
-        <div className="filters_filter">
-          <h3 className="filters_filter_title">Category</h3>
-          <ul>
-            <li className="filters_inner_li">
-              <input type="checkbox" />
-              <label>1</label>
-            </li>
-            <li>
-              <input type="checkbox" />
-              <label>2</label>
-            </li>
-            <li>
-              <input type="checkbox" />
-              <label>3</label>
-            </li>
-            <li>
-              <input type="checkbox" />
-              <label>4</label>
-            </li>
-          </ul>
-        </div>
-        <div className="filters_price">
-          <h3 className="filters_filter_title">Price</h3>
-          <p>
-            <input maxlength="25" size="20" />
-            -
-            <input maxlength="25" size="20" />
-          </p>
-        </div>
+        {filters.map((el, i) => {
+          return (
+            <Accordion name={el.name} content={el.content} key={i}></Accordion>
+          );
+        })}
       </div>
     </div>
   );

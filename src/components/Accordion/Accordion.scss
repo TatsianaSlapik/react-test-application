@@ -1,0 +1,28 @@
+.accordion-item_icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  transition: transform 0.3s ease-in-out;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/src/assets/img/arrow.png);
+  transform: rotate(180deg);
+  opacity: 0.6;
+}
+
+.accordion-item__line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion_content_hide {
+  display: none;
+}
+.accordion-item_icon_hide {
+  width: 2.2rem;
+  height: 2.2rem;
+  transition: transform 0.3s ease-in-out;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/src/assets/img/arrow.png);
+  opacity: 0.6;
+}

@@ -1,24 +1,22 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import actions from "../../utils/actions";
 
 import "./Switcher.scss";
 
-export default function Switcher() {
-  const list = "list";
-  const grid = "grid";
-
+function Switcher({ listState }) {
   const dispatch = useDispatch();
 
-  const toggleSwitch = () => {
-    dispatch({ type: actions.CHANGE_VIEW, payload: list });
+  const toggleSwitch = (e) => {
+    dispatch({ type: actions.CHANGE_VIEW, payload: e.target.checked });
   };
+
   return (
     <div className="toggle">
       <input
         className="toggle_input"
         type="checkbox"
-        defaultChecked={list}
+        checked={listState}
         onChange={toggleSwitch}
       />
       <div className="toggle_bg"></div>
@@ -29,3 +27,6 @@ export default function Switcher() {
     </div>
   );
 }
+
+const mapStateToProps = (state) => ({ listState: state.listViewState });
+export default connect(mapStateToProps)(Switcher);

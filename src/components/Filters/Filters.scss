@@ -4,10 +4,31 @@
   flex-shrink: 0;
 }
 
-.filters_header {
-  padding: 20px 40px;
+.filters_inner {
+  margin-left: 36px;
 }
 
 .filters_inner_li {
   list-style: none;
+  margin-block: 21px;
+  input {
+    transform: scale(1.8);
+  }
+  label {
+    font-size: 21px;
+    margin-left: 16px;
+  }
+}
+
+.filters_price_inner {
+  width: 326px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-left: 18px;
+  margin-block: 21px;
+  input {
+    transform: scale(2.8);
+  }
 }
