@@ -20,3 +20,38 @@
     bottom: 0;
   }
 }
+.product_view {
+  height: 445px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+
+  .product_img {
+    width: 180px;
+    height: 250px;
+  }
+  .product_content {
+    padding: 0 150px;
+    width: 759px;
+  }
+
+  .product_name {
+    font-weight: 500;
+  }
+  .product_price {
+    font-size: 30px;
+  }
+  .product_description {
+    margin-top: 50px;
+  }
+  .button_container {
+    flex: none;
+    bottom: 0;
+    position: absolute;
+  }
+  .product_price_container {
+    width: 210px;
+    height: 300px;
+    position: relative;
+  }
+}

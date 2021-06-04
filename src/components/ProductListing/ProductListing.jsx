@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 
 import Product from "../Product/Product";
 import Switcher from "../Switcher/Switcher";
+import { connect } from "react-redux";
 import "./ProductListing.scss";
 
-export default function ProductListing() {
+function ProductListing({ listState }) {
   const [productList, setProductsList] = useState([]);
 
   useEffect(() => {
@@ -22,7 +23,9 @@ export default function ProductListing() {
       <div className="product_switcher">
         <Switcher></Switcher>{" "}
       </div>
-      <div className="product_container">
+      <div
+        className={listState ? "product_container list" : "product_container"}
+      >
         {productList.map((el, i) => {
           return (
             <Product
@@ -31,6 +34,7 @@ export default function ProductListing() {
               image={el.image + `?id=${i}`}
               price={el.price}
               key={i}
+              fullView={listState}
             ></Product>
           );
         })}
@@ -38,3 +42,5 @@ export default function ProductListing() {
     </div>
   );
 }
+const mapStateToProps = (state) => ({ listState: state.listViewState });
+export default connect(mapStateToProps)(ProductListing);
