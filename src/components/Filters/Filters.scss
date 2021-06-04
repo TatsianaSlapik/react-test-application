@@ -1,0 +1,40 @@
+.filters {
+  overflow: auto;
+  width: 25%;
+  flex-shrink: 0;
+  @media screen and (max-width: 320px) {
+    width: 100%;
+  }
+}
+
+.filters_inner {
+  margin-left: 36px;
+}
+
+.filters_inner_li {
+  list-style: none;
+  margin-block: 21px;
+  input {
+    transform: scale(1.8);
+  }
+  label {
+    font-size: 21px;
+    margin-left: 16px;
+  }
+}
+
+.filters_price_inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+
+  margin-block: 21px;
+
+  input {
+    transform: scale(2.8);
+    @media screen and (max-width: 320px) {
+      transform: scale(1.8);
+    }
+  }
+}
