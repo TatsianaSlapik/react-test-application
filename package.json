@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "build": "webpack"
+    "build": "webpack",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.12.16",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-react": "^7.10.4",
+    "@babel/polyfill": "^7.12.1",
     "babel-loader": "^8.2.2",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
@@ -31,5 +31,20 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "babel-jest": "^27.0.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "jest": "^27.0.4",
+    "react-test-renderer": "^16.8.0",
+    "redux-mock-store": "^1.5.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss|png|jpg|svg)$": "babel-jest"
+    }
   }
 }

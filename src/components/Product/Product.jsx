@@ -1,12 +1,6 @@
 import React from "react";
-import ButtonCart from "../ButtonCart/ButtonCart";
+import CartButton from "../CartButton/CartButton";
 import "./Product.scss";
-
-const AboutTheProduct = {
-  NAME: "Name",
-  DESCRIPTION: "Description",
-  PRICE: "Price",
-};
 
 export default function Product({ name, description, image, price, fullView }) {
   return (
@@ -24,10 +18,10 @@ export default function Product({ name, description, image, price, fullView }) {
         {fullView ? (
           <div className="product_price_container">
             <h3 className="product_price">{price} &#8381;</h3>
-            <ButtonCart />
+            <CartButton />
           </div>
         ) : (
-          <ButtonCart />
+          <CartButton />
         )}
       </div>
     </>

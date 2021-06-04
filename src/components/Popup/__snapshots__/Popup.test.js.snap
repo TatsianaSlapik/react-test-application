@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popup Popup when showPopup is true should be rendered 1`] = `
+<div
+  className="popup"
+>
+  <div
+    className="popup_inner"
+  >
+    <h2
+      className="popup_text"
+    />
+    <button
+      className="popup_btn"
+      onClick={[Function]}
+    >
+      ОК
+    </button>
+  </div>
+</div>
+`;

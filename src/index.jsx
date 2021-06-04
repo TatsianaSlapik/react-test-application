@@ -9,6 +9,7 @@ import "./index.scss";
 
 import Main from "./views/Main/Main";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const rootElement = document.getElementById("root");
 
@@ -18,6 +19,7 @@ function App() {
     <Provider store={store}>
       <Header></Header>
       <Main />
+      <Footer />
     </Provider>
   );
 }

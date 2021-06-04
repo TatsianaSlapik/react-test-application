@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filters Filters 1`] = `
+<div
+  className="filters"
+>
+  <div
+    className="filters_inner"
+  >
+    <div
+      className="accordion-item__line"
+      onClick={[Function]}
+    >
+      <h3
+        className="filters_filter_title"
+      >
+        Category
+      </h3>
+      <span
+        className="accordion-item_icon"
+      />
+    </div>
+    <div
+      className="accordion_content"
+    >
+      <ul>
+        <li
+          className="filters_inner_li"
+        >
+          <input
+            type="checkbox"
+          />
+          <label>
+            Smartphones
+          </label>
+        </li>
+        <li
+          className="filters_inner_li"
+        >
+          <input
+            type="checkbox"
+          />
+          <label>
+            iPhone
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="accordion-item__line"
+      onClick={[Function]}
+    >
+      <h3
+        className="filters_filter_title"
+      >
+        Price
+      </h3>
+      <span
+        className="accordion-item_icon"
+      />
+    </div>
+    <div
+      className="accordion_content"
+    >
+      <div
+        className="filters_price_inner"
+      >
+        <input
+          maxLength="25"
+          size="5"
+        />
+        ―
+        <input
+          maxLength="25"
+          size="5"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

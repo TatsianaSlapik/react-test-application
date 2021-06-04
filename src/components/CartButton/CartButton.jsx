@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import Cart from "../../assets/img/cart.png";
 import actions from "../../utils/actions";
 
-import "./ButtonCart.scss";
+import "./CartButton.scss";
 
 export default function ButtonCart() {
   const dispatch = useDispatch();
