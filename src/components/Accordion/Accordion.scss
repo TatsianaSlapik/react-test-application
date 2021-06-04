@@ -17,6 +17,9 @@
 .accordion_content_hide {
   display: none;
 }
+.accordion_content {
+  border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+}
 .accordion-item_icon_hide {
   width: 2.2rem;
   height: 2.2rem;

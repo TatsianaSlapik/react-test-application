@@ -1,21 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 import Product from "../Product/Product";
 import Switcher from "../Switcher/Switcher";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
+import actions from "../../utils/actions";
+
 import "./ProductListing.scss";
 
-function ProductListing({ listState }) {
-  const [productList, setProductsList] = useState([]);
+function ProductListing({ listState, productsList }) {
+  const dispatch = useDispatch();
+
+  const setProductsList = (data) => {
+    dispatch({ type: actions.PRODUCT_LIST, payload: data });
+  };
 
   useEffect(() => {
-    fetch(
-      `https://fakerapi.it/api/v1/products?_quantity=10&_taxes=10&_categories_type=string`
-    )
-      .then((res) => res.json())
-      .then((result) => {
-        setProductsList(result.data);
-      });
+    if (productsList.length === 0) {
+      fetch(
+        `https://fakerapi.it/api/v1/products?_quantity=10&_taxes=10&_categories_type=string`
+      )
+        .then((res) => res.json())
+        .then((result) => {
+          setProductsList(result.data);
+        });
+    }
   }, []);
 
   return (
@@ -26,7 +34,7 @@ function ProductListing({ listState }) {
       <div
         className={listState ? "product_container list" : "product_container"}
       >
-        {productList.map((el, i) => {
+        {productsList.map((el, i) => {
           return (
             <Product
               name={el.name}
@@ -42,5 +50,8 @@ function ProductListing({ listState }) {
     </div>
   );
 }
-const mapStateToProps = (state) => ({ listState: state.listViewState });
+const mapStateToProps = (state) => ({
+  listState: state.listViewState,
+  productsList: state.productsList,
+});
 export default connect(mapStateToProps)(ProductListing);

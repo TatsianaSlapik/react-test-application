@@ -1,3 +1,4 @@
 export default {
   CHANGE_VIEW: "CHANGE_VIEW",
+  PRODUCT_LIST: "PRODUCT_LIST",
 };

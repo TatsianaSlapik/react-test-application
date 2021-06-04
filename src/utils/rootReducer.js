@@ -7,10 +7,16 @@ export const initialState = {
 export default function rootReducer(state = initialState, action) {
   switch (action.type) {
     case actions.CHANGE_VIEW: {
-      localStorage.setItem("toggleList", action.payload);
       return {
         ...state,
         listViewState: action.payload,
+      };
+    }
+
+    case actions.PRODUCT_LIST: {
+      return {
+        ...state,
+        productsList: action.payload,
       };
     }
     default:

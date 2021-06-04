@@ -9,11 +9,11 @@ const filters = [
       <ul>
         <li className="filters_inner_li">
           <input type="checkbox" />
-          <label>1</label>
+          <label>Smartphones</label>
         </li>
         <li className="filters_inner_li">
           <input type="checkbox" />
-          <label>2</label>
+          <label>iPhone</label>
         </li>
       </ul>
     ),
@@ -22,9 +22,9 @@ const filters = [
     name: "Price",
     content: (
       <div className="filters_price_inner">
-        <input maxlength="25" size="5" />
+        <input maxLength="25" size="5" />
         ―
-        <input maxlength="25" size="5" />
+        <input maxLength="25" size="5" />
       </div>
     ),
   },
