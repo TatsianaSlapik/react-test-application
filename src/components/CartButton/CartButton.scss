@@ -1,0 +1,24 @@
+.button {
+  border: 6px solid #d90929;
+  border-radius: 8px;
+  padding: 4px 25px;
+  color: #ffffff;
+  font-size: 21px;
+  background-color: #d90929;
+  display: flex;
+  margin: 0 auto;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 32px;
+    margin-right: 10px;
+  }
+
+  p {
+    font-weight: 600;
+  }
+}

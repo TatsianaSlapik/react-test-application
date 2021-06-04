@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Product when listViewState is true should be rendered 1`] = `
+<div
+  className="product"
+>
+  <img
+    alt="photo"
+    className="product_img"
+  />
+  <div
+    className="product_content"
+  >
+    <h2
+      className="product_name"
+    />
+    <h3
+      className="product_price"
+    >
+       ₽
+    </h3>
+  </div>
+  <div
+    className="button_container"
+  >
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      <img
+        alt="basket"
+        src={
+          Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "getCacheKeyAsync": [Function],
+            "process": [Function],
+            "processAsync": [Function],
+          }
+        }
+      />
+      <p>
+        Add to cart
+      </p>
+    </button>
+  </div>
+</div>
+`;

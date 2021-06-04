@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductListing Product Listing when listViewState is true should be rendered 1`] = `
+<div>
+  <div
+    className="product_switcher"
+  >
+    <div
+      className="toggle"
+    >
+      <input
+        checked={false}
+        className="toggle_input"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="toggle_bg"
+      />
+      <div
+        className="toggle_switch"
+      >
+        <div
+          className="toggle_switch_grid"
+        />
+        <div
+          className="toggle_switch_list"
+        />
+      </div>
+    </div>
+     
+  </div>
+  <div
+    className="product_container"
+  />
+</div>
+`;
